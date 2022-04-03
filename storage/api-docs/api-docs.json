@@ -1,0 +1,136 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "L5 OpenApi",
+        "description": "Swagger UI",
+        "version": "2.0.0"
+    },
+    "paths": {
+        "/api/register": {
+            "post": {
+                "tags": [
+                    "Authorization"
+                ],
+                "operationId": "8e4e3cb7b46126f4696379d3c7eeb4ad",
+                "parameters": [
+                    {
+                        "name": "firstname",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Succesfully"
+                    }
+                }
+            }
+        },
+        "/api/login": {
+            "post": {
+                "tags": [
+                    "Authorization"
+                ],
+                "operationId": "222b2625838e3c57e017987f73598fda",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Succesfully"
+                    }
+                }
+            }
+        },
+        "/api/testing": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "An example resource mean"
+                    }
+                }
+            }
+        },
+        "/api/post": {
+            "post": {
+                "tags": [
+                    "Post"
+                ],
+                "operationId": "ec545b17aa761c7c9478800107120b1a",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "title",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "description",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Succesfully"
+                    }
+                },
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ]
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
